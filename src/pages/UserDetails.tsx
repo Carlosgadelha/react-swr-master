@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { useFetch } from '../hooks/useFetch';
 
 
 interface User {
@@ -8,17 +9,24 @@ interface User {
 }
 
 const UserDetails: React.FC = () => {
+  
   const  {id}  = useParams();
-  const [ data, setData ] = useState<User>();
+  const {data} =  useFetch <User>(`users/${id}`)
 
-  useEffect(() => {
-    fetch(`http://localhost:3333/users/${id}`).then(response =>{
-      response.json().then( user => {
-        setData(user);
-      })
-    })
+  if(!data){
+    return <p> Carregando ...</p>
+  }
+  // const  {id}  = useParams();
+  // const [ data, setData ] = useState<User>();
+
+  // useEffect(() => {
+  //   fetch(`http://localhost:3333/users/${id}`).then(response =>{
+  //     response.json().then( user => {
+  //       setData(user);
+  //     })
+  //   })
     
-  },[id]);
+  // },[id]);
 
   return (
     <ul>

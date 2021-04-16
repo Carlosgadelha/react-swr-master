@@ -1,20 +1,20 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Diego"
+      "name": "Bartolomeu",
+      "id": 1
     },
     {
       "id": 2,
       "name": "Dani"
     },
     {
-      "name": "Carla",
+      "name": "Bartolomeu",
       "id": 3
     },
     {
-      "id": 4,
-      "name": "Mary"
+      "name": "Bartolomeu",
+      "id": 4
     },
     {
       "id": 5,
@@ -35,6 +35,14 @@
     {
       "name": "Tereza",
       "id": 9
+    },
+    {
+      "name": "Bartolomeu",
+      "id": 10
+    },
+    {
+      "name": "Bartolomeu",
+      "id": 11
     }
   ]
 }
